@@ -14,6 +14,7 @@ const userSchema = new Schema({
   email: {type: String, required: true, unique: true },
   password: { type: String, required: true },
   admin: { type: Boolean, required: true, 'default': false },
+  student: { type: Boolean, required: true, 'default': false },
 
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }
