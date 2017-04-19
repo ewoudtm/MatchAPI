@@ -2,6 +2,7 @@
 
 const globalHooks = require('../../../hooks');
 const hooks = require('feathers-hooks');
+const commonHooks = require('feathers-hooks-common');
 const auth = require('feathers-authentication').hooks;
 
 exports.before = {
@@ -19,7 +20,11 @@ exports.before = {
 };
 
 exports.after = {
-  all: [],
+  all: [commonHooks.populate('students', {
+    service: 'users',
+    field: 'studentId'
+    }),
+  ],
   find: [],
   get: [],
   create: [],

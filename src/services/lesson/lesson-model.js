@@ -1,7 +1,7 @@
 'use strict';
 
 // lesson-model.js - A mongoose model
-// 
+//
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 
@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const lessonSchema = new Schema({
-  text: { type: String, required: true },
+  title: { type: String, required: true, 'default': 'Todays Lesson' },
+  date: type: Date,
+  teams: type: Array,
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }
 });
