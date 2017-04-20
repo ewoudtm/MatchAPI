@@ -7,16 +7,8 @@ const getGravatar = require('./gravatar');
 
 exports.before = {
   all: [],
-  find: [
-    auth.verifyToken(),
-    auth.populateUser(),
-    auth.restrictToAuthenticated()
-  ],
-  get: [
-    auth.verifyToken(),
-    auth.populateUser(),
-    auth.restrictToAuthenticated(),
-  ],
+  find: [],
+  get: [],
   create: [
     auth.hashPassword(),
     getGravatar(),

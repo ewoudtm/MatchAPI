@@ -11,7 +11,7 @@ const Schema = mongoose.Schema;
 const lessonSchema = new Schema({
   title: { type: String, required: true, 'default': 'Todays Lesson' },
   date: { type: Date },
-  teams: { type: Array },
+  teams: { type: Array, 'default': [] },
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }
 });
