@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
-  studentId: [Schema.Types.ObjectId],
+  studentIds: [Schema.Types.ObjectId],
   active: {type: Boolean, 'default': true },
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }
